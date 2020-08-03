@@ -31,7 +31,6 @@ const mutations = {
             state.products.push({ ...product })
         } else {
             prodIn.quantity += parseInt(cantidad);
-            //console.log(state.products)        
         }
         Vue.swal.fire(product.name.toUpperCase(),
             'Added to cart!',
@@ -40,7 +39,6 @@ const mutations = {
     ,
     incrementProductQuantity(state, { productCar }) {
         let prodIn = state.products.find(p => p._id === productCar._id)
-        console.log(prodIn)
         if (prodIn && prodIn.quantity < prodIn.inventory) {
             prodIn.quantity++
         }

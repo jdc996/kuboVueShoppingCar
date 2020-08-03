@@ -14,7 +14,7 @@
       <div class="image">
         <img
           class="car-product-image"
-          src="https://www.luzzidigital.com/wp-content/uploads/2019/07/lanz-1024x657.png"
+          :src="productCar.image"
           :alt="productCar.name"
         />
       </div>
@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     postOrder() {
-      console.log("entro a post order");
 
       axios
         .post(`${this.urlApi}/orders/`, {
@@ -94,7 +93,6 @@ export default {
             title: `${err.response.data.statusCode}`,
             html: `<strong>Error:</strong> ${err.response.data.message} </br>`,
           });
-          console.log(err.response);
         });
     },
 

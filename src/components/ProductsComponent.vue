@@ -67,7 +67,6 @@ export default {
         let res = await axios.get(
           `${this.urlApi}/products?${this.categoriesFilter}page=${this.page}`
         );
-        console.log(res);
         let products = res.data.docs;
         this.page = res.data.page;
         this.totalPages = res.data.totalPages;
