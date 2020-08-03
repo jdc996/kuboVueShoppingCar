@@ -53,7 +53,7 @@ export default {
     async getCategories() {
       try {
         let res = await axios.get(
-          "http://localhost:3000/products/categories/all/"
+          `${this.urlApi}/products/categories/all`
         );
         let categories = res.data;
         return categories;
@@ -65,7 +65,7 @@ export default {
     async getProducts() {
       try {
         let res = await axios.get(
-          `http://localhost:3000/products?${this.categoriesFilter}page=${this.page}`
+          `${this.urlApi}/products?${this.categoriesFilter}page=${this.page}`
         );
         console.log(res);
         let products = res.data.docs;
@@ -80,6 +80,7 @@ export default {
   },
   data() {
     return {
+      urlApi : process.env.VUE_APP_ROUTE_API,
       products: [],
       categories: [],
       checkedCategories: [],

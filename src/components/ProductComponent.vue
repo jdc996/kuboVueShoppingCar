@@ -2,7 +2,7 @@
   <article class="card">
     <img
       class="product-image"
-      src="https://www.luzzidigital.com/wp-content/uploads/2019/07/lanz-1024x657.png"
+      :src="product.image"
       :alt="product.name"
     />
     <div class="description-container">

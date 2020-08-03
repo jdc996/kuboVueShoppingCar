@@ -75,7 +75,7 @@ export default {
       console.log("entro a post order");
 
       axios
-        .post("http://localhost:3000/orders/", {
+        .post(`${this.urlApi}/orders/`, {
           products: this.products,
         })
         .then((response) => {
@@ -89,7 +89,12 @@ export default {
           });
         })
         .catch((err) => {
-          console.log(err);
+          this.$swal.fire({
+            icon: "error",
+            title: `${err.response.data.statusCode}`,
+            html: `<strong>Error:</strong> ${err.response.data.message} </br>`,
+          });
+          console.log(err.response);
         });
     },
 
@@ -102,6 +107,7 @@ export default {
 
   data() {
     return {
+      urlApi: process.env.VUE_APP_ROUTE_API,
       order: Object,
     };
   },
