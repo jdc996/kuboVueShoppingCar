@@ -95,4 +95,22 @@ export default {
   flex-direction: row;
   justify-content: space-around;
 }
+
+@media (max-width: 570px) {
+  .product-image {
+    width: 100px;
+    height: 120px;
+    margin: auto;
+  }
+  .card {
+  padding: 1.2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+}
 </style>

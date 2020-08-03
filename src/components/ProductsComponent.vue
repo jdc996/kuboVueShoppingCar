@@ -128,4 +128,14 @@ main {
   display: flex;
   padding: 1em;
 }
+
+@media (max-width: 570px) {
+  .products-container{
+    flex-direction: column;
+  }
+  .pagination-container{
+    box-sizing: content-box;
+  }
+
+}
 </style>

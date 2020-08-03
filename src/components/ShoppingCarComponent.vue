@@ -110,7 +110,7 @@ export default {
 
 <style scoped>
 .shopping-cart {
-  width: 750px;
+  width: 95%;
   margin: 80px auto;
   background: #ffffff;
   box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);

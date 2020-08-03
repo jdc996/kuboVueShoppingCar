@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <div class="logo-container">
-      <img id="logo-kubo" src="../assets/logo.png" alt="Kubo Logo" />
+      <img id="logo-vue" src="../assets/logo.png" alt="Vue Logo" />
       <span id="kubo-name-page">Kubo Shopping Car</span>
     </div>
     <nav id="menu">
@@ -34,7 +34,7 @@ export default {
   justify-content: center;
 }
 
-#logo-kubo {
+#logo-vue {
   width: 100px;
   height: 100px;
 }
@@ -63,7 +63,28 @@ a:link {
   font-size: 1.5rem;
   text-decoration: none;
 }
-.router-link-exact-active{
+.router-link-exact-active {
   color: rgb(7, 179, 179);
+}
+
+@media (max-width: 570px) {
+  .products-container {
+    flex-direction: column;
+  }
+  .pagination-container {
+    box-sizing: content-box;
+  }
+  #logo-vue {
+    width: 75px;
+    height: 75px;
+  }
+  a:link {
+  padding-left: 0.5em;
+  font-size: 1em;
+  text-decoration: none;
+}
+#kubo-name-page{
+  font-size: 1em;
+}
 }
 </style>
